@@ -536,13 +536,16 @@
             }
         });
         
-        
-        document.querySelector('.btn-primary[download]').addEventListener('click', function(e) {
+         document.querySelector('.btn-primary[download]').addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Resume download will start now.');
-            
-             window.location.href = "https://drive.google.com/file/d/1cVDtQPM2kxFwkcgO9XHIHsvMoQm1duHl/view?usp=drive_link";
-        });
+            alert('Download will start now.');
+    
+    
+    const fileId = "1cVDtQPM2kxFwkcgO9XHIHsvMoQm1duHl"; // Extract this from the shared URL
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    
+    window.location.href = downloadUrl;  // Initiate download
+});
     </script>
 </body>
 </html>
